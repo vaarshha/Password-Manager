@@ -72,23 +72,23 @@ def generate_password():
 	res+=random.choice(spl_chars)
 	return res
 
-# def add_pass(obj):
-# 	website = input("Enter website name: ")
-# 	if obj.find_rec(website):
-# 		print("Password already logged for website. Update or delete instead")
-# 		return 
-# 	username = input("Enter username: ")
-# 	choice = input("A. Enter password \nB. Create password: ")
-# 	if choice == 'A':
-# 		password = input("Password: ")
-# 		while not password_strength(password):
-# 			print("**Password is weak**")
-# 			password = input("Password: ")
-# 		obj.insert_rec(website,username,encrypt(password))
-# 	elif choice=='B':
-# 		obj.insert_rec(website,username,encrypt(generate_password()))
-# 	else:
-# 		print("Invalid choice")
+def add_pass(obj):
+	website = input("Enter website name: ")
+	if obj.find_rec(website):
+		print("Password already logged for website. Update or delete instead")
+		return 
+	username = input("Enter username: ")
+	choice = input("A. Enter password \nB. Create password: ")
+	if choice == 'A':
+		password = input("Password: ")
+		while not password_strength(password):
+			print("**Password is weak**")
+			password = input("Password: ")
+		obj.insert_rec(website,username,encrypt(password))
+	elif choice=='B':
+		obj.insert_rec(website,username,encrypt(generate_password()))
+	else:
+		print("Invalid choice")
 
 def retrieve_pass(obj):
 	website = input("Enter website name: ")
