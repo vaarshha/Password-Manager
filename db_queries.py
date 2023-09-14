@@ -45,36 +45,4 @@ class database():
 				if (datetime.date(today)-last_saved_date).days > 60:
 					print(f"***Change password for {row[0]}***")
 
-# def insert_rec(website,userid,password):
-# 	conn = psycopg2.connect("dbname=locker user=postgres password=tree") 
-# 	cur = conn.cursor()
-# 	query = f"INSERT INTO secureDB VALUES('{website}','{userid}','{password}') "
-# 	cur.execute(query)
-# 	conn.commit()
-# 	cur.close()
 
-# def find_rec(website):
-# 	conn = psycopg2.connect("dbname=locker user=postgres password=tree") 
-# 	cur = conn.cursor()
-# 	query = f"SELECT * FROM secureDB WHERE website='{website}'"
-# 	cur.execute(query)
-# 	res = cur.fetchall()
-# 	cur.close()
-# 	return res
-
-# def update_entry(website,password):
-# 	conn = psycopg2.connect("dbname=locker user=postgres password=tree") 
-# 	cur = conn.cursor()
-# 	query = f"UPDATE secureDB set pass='{password}' WHERE website='{website}'"
-# 	cur.execute(query)
-# 	conn.commit()
-# 	cur.close()
-
-# def delete_entry():
-# 	website = input("Website: ")
-# 	conn = psycopg2.connect("dbname=locker user=postgres password=tree") 
-# 	cur = conn.cursor()
-# 	query = f"DELETE FROM secureDB WHERE website='{website}'"
-# 	cur.execute(query)
-# 	conn.commit()
-# 	cur.close()
